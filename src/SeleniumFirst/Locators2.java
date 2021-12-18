@@ -99,7 +99,8 @@ public class Locators2 {
 
 	}
 
-	public void exit (){
+	public void exit () throws InterruptedException{
+		driver.manage().wait(1000);
 		driver.close();
 	}
 
