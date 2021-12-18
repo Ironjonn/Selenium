@@ -99,6 +99,10 @@ public class Locators2 {
 
 	}
 
+	public void exit (){
+		driver.close();
+	}
+
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 
@@ -109,6 +113,7 @@ public class Locators2 {
 		String password = Object.getPassword();
 		Object.Loggein();
 		Object.singIn(password);
+		Object.exit();
 	}
 
 }
