@@ -9,8 +9,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.Assert;
 
-
-
 public class Locators2 {
 	WebDriver driver;
 
@@ -82,8 +80,6 @@ public class Locators2 {
 		String password2 = passwordarray2[0];
 		return password2;
 	}
-	 	
-	
 
 	public void Loggein() {
 		driver.findElement(By.xpath("//*[@class= 'go-to-login-btn']")).click();
@@ -99,7 +95,7 @@ public class Locators2 {
 
 	}
 
-	public void exit () throws InterruptedException{
+	public void exit() throws InterruptedException {
 		driver.manage().wait(1000);
 		driver.close();
 	}
