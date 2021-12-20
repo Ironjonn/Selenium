@@ -29,11 +29,16 @@ public class Browseractivities {
 
     }
 
+    public void exit (){
+        driver.close();
+    }
+
     public static void main(String[] args) throws InterruptedException {
         Browseractivities Myobj = new Browseractivities();
         Myobj.setbrowser();
         Myobj.Windowactivities();
         Myobj.Geturl();
+        Myobj.exit();
 
     }
 
