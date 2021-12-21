@@ -9,7 +9,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 public class Locators {
 
 	public static void main(String[] args) throws InterruptedException {
-		// TODO Auto-generated method stub
+		
 
 		// implicit wait - 2 seconds time out
 

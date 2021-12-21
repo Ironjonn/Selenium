@@ -6,7 +6,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 public class Selenuinintroduction {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 
 		System.setProperty("webdriver.edge.driver", "C:\\Selenium\\edgedriver_win32\\msedgedriver.exe");
 		WebDriver driver = new EdgeDriver();
