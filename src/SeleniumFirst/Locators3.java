@@ -9,7 +9,7 @@ public class Locators3 {
 
     WebDriver driver;
 
-    public void Setingbrowser() {
+    public void launchbrowser() {
         System.setProperty("webdriver.edge.driver", "C:\\\\Selenium\\\\edgedriver_win32\\\\msedgedriver.exe");
         driver = new EdgeDriver();
         driver.manage().window().maximize();
@@ -34,7 +34,7 @@ public class Locators3 {
 
     public static void main(String[] args) {
         Locators3 Obj = new Locators3();
-        Obj.Setingbrowser();
+        Obj.launchbrowser();
         Obj.GettibgURl();
         Obj.testingXpath();
     }
