@@ -7,7 +7,7 @@ public class Browseractivities {
 
     WebDriver driver;
 
-    public void setbrowser() {
+    public void launchbrowser() {
 
         System.setProperty("webdriver.edge.driver", "C:\\\\Selenium\\\\edgedriver_win32\\\\msedgedriver.exe");
         driver = new EdgeDriver();
@@ -29,13 +29,13 @@ public class Browseractivities {
 
     }
 
-    public void exit (){
+    public void exit() {
         driver.close();
     }
 
     public static void main(String[] args) throws InterruptedException {
         Browseractivities Myobj = new Browseractivities();
-        Myobj.setbrowser();
+        Myobj.launchbrowser();
         Myobj.Windowactivities();
         Myobj.Geturl();
         Myobj.exit();
