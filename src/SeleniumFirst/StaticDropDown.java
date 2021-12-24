@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class ExampleStaticDropDown {
+public class StaticDropDown {
     WebDriver driver;
 
     public void launchbrowser() {
@@ -42,7 +42,7 @@ public class ExampleStaticDropDown {
     }
 
     public static void main(String[] args) {
-        ExampleStaticDropDown Obj = new ExampleStaticDropDown();
+       StaticDropDown Obj = new StaticDropDown();
         Obj.launchbrowser();
         Obj.Windowactivities();
         Obj.GettibgURl();
