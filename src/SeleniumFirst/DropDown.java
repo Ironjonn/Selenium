@@ -1,7 +1,5 @@
 package SeleniumFirst;
 
-
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -9,7 +7,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 public class DropDown {
     WebDriver driver;
 
-    public void launchbrowser() {
+    public void launchbrowsers() {
         System.setProperty("webdriver.edge.driver", "C:\\\\Selenium\\\\edgedriver_win32\\\\msedgedriver.exe");
         driver = new EdgeDriver();
 
@@ -37,12 +35,18 @@ public class DropDown {
         driver.findElement(By.xpath("//a[@value='BLR']")).click();
 
         Thread.sleep(2000L);
-        driver.findElement(By.xpath("(//a[@value='MAA'])[2]")).click();
+        // driver.findElement(By.xpath("(//a[@value='MAA'])[2]")).click();
+
+        // El siguiente locator lo encontre buscando al padre despues el hijo parent child relashimship Xpath
+        // sirve mucho cuando tu jefe no quiere que utilices el index de arriba es el
+        // mismo xpath del dropdown
+        driver.findElement(By.xpath("//div[@id='glsctl00_mainContent_ddl_destinationStation1_CTNR'] //a[@value='MAA']")).click();
+
     }
 
     public static void main(String[] args) throws InterruptedException {
         DropDown myObj = new DropDown();
-        myObj.launchbrowser();
+        myObj.launchbrowsers();
         myObj.GettibgURl();
         myObj.Windowactivities();
         myObj.TestingDropDown();
