@@ -1,0 +1,84 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch AutosuggestiveDropdown",
+            "request": "launch",
+            "mainClass": "SeleniumFirst.AutosuggestiveDropdown",
+            "projectName": "Selenium"
+        },
+        {
+            "type": "java",
+            "name": "Launch Browseractivities",
+            "request": "launch",
+            "mainClass": "SeleniumFirst.Browseractivities",
+            "projectName": "Selenium"
+        },
+        {
+            "type": "java",
+            "name": "Launch Checkbox",
+            "request": "launch",
+            "mainClass": "SeleniumFirst.Checkbox",
+            "projectName": "Selenium"
+        },
+        {
+            "type": "java",
+            "name": "Launch DropDown",
+            "request": "launch",
+            "mainClass": "SeleniumFirst.DropDown",
+            "projectName": "Selenium"
+        },
+        {
+            "type": "java",
+            "name": "Launch Locators",
+            "request": "launch",
+            "mainClass": "SeleniumFirst.Locators",
+            "projectName": "Selenium"
+        },
+        {
+            "type": "java",
+            "name": "Launch Locators2",
+            "request": "launch",
+            "mainClass": "SeleniumFirst.Locators2",
+            "projectName": "Selenium"
+        },
+        {
+            "type": "java",
+            "name": "Launch Locators3",
+            "request": "launch",
+            "mainClass": "SeleniumFirst.Locators3",
+            "projectName": "Selenium"
+        },
+        {
+            "type": "java",
+            "name": "Launch Selenuinintroduction",
+            "request": "launch",
+            "mainClass": "SeleniumFirst.Selenuinintroduction",
+            "projectName": "Selenium"
+        },
+        {
+            "type": "java",
+            "name": "Launch StaticDropDown",
+            "request": "launch",
+            "mainClass": "SeleniumFirst.StaticDropDown",
+            "projectName": "Selenium"
+        },
+        {
+            "type": "java",
+            "name": "Launch UpdatedDropdown",
+            "request": "launch",
+            "mainClass": "SeleniumFirst.UpdatedDropdown",
+            "projectName": "Selenium"
+        }
+    ]
+}
