@@ -5,6 +5,7 @@ import javax.swing.JOptionPane;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.testng.Assert;
 
 public class Checkbox {
     
@@ -29,12 +30,16 @@ public class Checkbox {
     }
     
     public void Example(){
-        JOptionPane.showMessageDialog(null , driver.findElement(By.xpath("//*[@id='ctl00_mainContent_chk_SeniorCitizenDiscount']")).isSelected());
+        Assert.assertFalse(driver.findElement(By.xpath("//*[@id='ctl00_mainContent_chk_SeniorCitizenDiscount']")).isSelected());
+        //Assert.assertFalse(true);JOptionPane.showMessageDialog(null , driver.findElement(By.xpath("//*[@id='ctl00_mainContent_chk_SeniorCitizenDiscount']")).isSelected());
+        
         driver.findElement(By.xpath("//*[contains(@id,'SeniorCitizenDiscount')]")).click();
-        JOptionPane.showMessageDialog(null , driver.findElement(By.xpath("//*[@id='ctl00_mainContent_chk_SeniorCitizenDiscount']")).isSelected());
+        Assert.assertTrue(driver.findElement(By.xpath("//*[@id='ctl00_mainContent_chk_SeniorCitizenDiscount']")).isSelected());
+        //JOptionPane.showMessageDialog(null , driver.findElement(By.xpath("//*[@id='ctl00_mainContent_chk_SeniorCitizenDiscount']")).isSelected());
     }
 
-    public void Example2(){
+    public void Checkbossieze(){
+        //como checar cuantos elementos hay de checkbox en el padre 
         JOptionPane.showMessageDialog(null, driver.findElements(By.xpath("//input[@type='checkbox']")).size());
         
     }
@@ -46,7 +51,7 @@ public class Checkbox {
         MyObjts.GetUrl();
         MyObjts.Windowsactivities();
         MyObjts.Example();
-        MyObjts.Example2();
+        MyObjts.Checkbossieze();
 
     }
 }

@@ -5,6 +5,7 @@ import javax.swing.JOptionPane;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.testng.Assert;
 
 public class UpdatedDropdown {
     WebDriver driver;
@@ -41,8 +42,9 @@ public class UpdatedDropdown {
 
         driver.findElement(By.xpath("//*[@class='buttonN']")).click();;
         Thread.sleep(1000);
-
+        Assert.assertEquals(driver.findElement(By.xpath("//*[@id='divpaxinfo']")).getText(), "5 Adult");
         JOptionPane.showMessageDialog(null , driver.findElement(By.xpath("//*[@id='divpaxinfo']")).getText());
+        
 
     }
 
