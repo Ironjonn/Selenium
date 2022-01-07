@@ -23,10 +23,23 @@ public class CalendarUI {
         mydriver.manage().window().maximize();
     }
 
-    public void Example() throws InterruptedException{
-        mydriver.findElement(By.xpath("//*[@id='ctl00_mainContent_view_date1']")).click();
+    public void FromTo() throws InterruptedException {
+        mydriver.findElement(By.xpath("//*[@id='ctl00_mainContent_ddl_originStation1_CTXTaction']")).click();
         Thread.sleep(2000);
-      System.out.println(mydriver.findElement(By.cssSelector("a[.ui-state-defaultui-state-highlight]")).getText());  
+        mydriver.findElement(By.xpath("//a[@value='GOI']")).click();
+        Thread.sleep(2000);
+        mydriver.findElement(By.xpath("(//a[@value='JAI'])[2]")).click(); 
+        Thread.sleep(1000L); 
+        mydriver.findElement(By.cssSelector(".ui-state-defaultui-state-highlightui-state-active")).click();
+        
+
+    }
+
+    public void Example(){
+        
+        mydriver.findElement(By.cssSelector(".ui-state-default.ui-state-highlight.ui-state-active")).click();
+        
+       //System.out.println(mydriver.findElement(By.cssSelector("a[.ui-state-defaultui-state-highlight]")).getText());  
         
     }
     public static void main(String[] args) throws InterruptedException {
@@ -34,7 +47,9 @@ public class CalendarUI {
         objeto.launchBrowser();
         objeto.GetUrl();
         objeto.Windowactivities();
-       objeto.Example();
+        objeto.FromTo();
+        //Thread.sleep(2000);
+       // objeto.Example();
         System.out.println("Hola mundo desde Visualstudiocode");
     }
 }
