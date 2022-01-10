@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Elementsdisableorenambel",
+            "request": "launch",
+            "mainClass": "SeleniumFirst.Elementsdisableorenambel",
+            "projectName": "Selenium"
+        },
+        {
+            "type": "java",
             "name": "Launch CalendarUI",
             "request": "launch",
             "mainClass": "SeleniumFirst.CalendarUI",
