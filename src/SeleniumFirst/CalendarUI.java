@@ -29,8 +29,7 @@ public class CalendarUI {
         Thread.sleep(2000);
         mydriver.findElement(By.xpath("(//a[@value='JAI'])[2]")).click();
         Thread.sleep(1000L);
-        // mydriver.findElement(By.cssSelector("ui-state-default ui-state-highlight
-        // ui-state-active")).click();
+        
     }
 
     public void Example() {
