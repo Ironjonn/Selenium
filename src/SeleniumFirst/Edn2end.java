@@ -99,7 +99,7 @@ public class Edn2end {
         objeto.Geturl();
         objeto.Windowactivities();
         objeto.SelectiingAllLocators();
-        //objeto.closing();
+        objeto.closing();
     }
 
 }
