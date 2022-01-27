@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch HandlingJavaAlerts",
+            "request": "launch",
+            "mainClass": "SeleniumFirst.HandlingJavaAlerts",
+            "projectName": "Selenium"
+        },
+        {
+            "type": "java",
             "name": "Launch Edn2end",
             "request": "launch",
             "mainClass": "SeleniumFirst.Edn2end",
