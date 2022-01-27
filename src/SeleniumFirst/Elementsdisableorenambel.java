@@ -34,6 +34,8 @@ public class Elementsdisableorenambel {
         mydriver.findElement(By.xpath("//*[@id='ctl00_mainContent_rbtnl_Trip_1']")).click();
 
         JOptionPane.showMessageDialog(null, mydriver.findElement(By.xpath("//*[@id='Div1']")).getAttribute("style"));
+
+        //Identify the method used in Selenium WebDriver to verify the presence of a web element within the web page. need an example 
     }
 
     public static void main(String[] args) {
