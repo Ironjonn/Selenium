@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Addingitemstocart",
+            "request": "launch",
+            "mainClass": "SeleniumFirst.Addingitemstocart",
+            "projectName": "Selenium"
+        },
+        {
+            "type": "java",
             "name": "Launch HandlingJavaAlerts",
             "request": "launch",
             "mainClass": "SeleniumFirst.HandlingJavaAlerts",
