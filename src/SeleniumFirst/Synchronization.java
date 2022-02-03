@@ -33,6 +33,7 @@ public class Synchronization {
         driver = new EdgeDriver();
         // Ejemplo de implicit wait es aplicado global mente cada vez que el webdriver
         // busque algun locator esperara esos segundos que tu indiques
+        
         driver.manage().timeouts().implicitlyWait(5, SECONDS);
 
     }
@@ -60,9 +61,9 @@ public class Synchronization {
 
             // Quitamos el estacion con el metodo trim
             String easynames = name[0].trim();
-
+            
             // Convert array into arraylist for easy search
-            List VegetablesList = Arrays.asList(Vegetables);
+            List<String> VegetablesList = Arrays.asList(Vegetables);
             // Check wether name you extracted is present in arraylist or not
 
             if (VegetablesList.contains(easynames)) {

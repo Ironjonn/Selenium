@@ -46,9 +46,9 @@ public class Addingitemstocart {
 
             //Quitamos el estacion con el metodo trim 
             String easynames = name[0].trim();
-
+            
             // Convert array into arraylist for easy search
-            List VegetablesList = Arrays.asList(Vegetables);
+            List <String> VegetablesList = Arrays.asList(Vegetables);
             // Check wether name you extracted is present in arraylist or not
 
             if (VegetablesList.contains(easynames)) {
