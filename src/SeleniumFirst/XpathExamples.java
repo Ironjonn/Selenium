@@ -27,6 +27,9 @@ public class XpathExamples {
         //Seleccionando un hijo del padre dandolo en el orden que lo necesitas 
         driver.findElement(By.xpath("(//input[@name ='ctl00$mainContent$rbtnl_Trip'])[2]")).click();
 
+        //Seleccionando un hijo del padre sin index con xpath 
+        driver.findElement(By.xpath("//div[@id='glsctl00_mainContent_ddl_destinationStation1_CTNR'] //a[@value='MAA']")).click();
+
         //Seleccionando un locator que tenga muy largo el nombre o lo usemos para reducirlo usando solo 4 letras 
         driver.findElement(By.xpath("//input[contains(@id,'friendsa')]")).click();
 
