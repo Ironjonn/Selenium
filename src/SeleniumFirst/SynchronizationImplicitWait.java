@@ -12,7 +12,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
-public class Synchronization {
+public class SynchronizationImplicitWait {
     WebDriver driver;
     // Maneras de syncroinizar los tiempos en selenium
     // Implicit Wait
@@ -97,7 +97,7 @@ public class Synchronization {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        Synchronization Objecto = new Synchronization();
+        SynchronizationImplicitWait Objecto = new SynchronizationImplicitWait();
         Objecto.launchBrowser();
         Objecto.getUrl();
         Objecto.windowsActivities();
