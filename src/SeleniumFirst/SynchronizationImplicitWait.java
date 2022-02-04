@@ -1,10 +1,10 @@
 package SeleniumFirst;
 
-import static java.util.concurrent.TimeUnit.SECONDS;
+//import static java.util.concurrent.TimeUnit.SECONDS;
 
+import java.time.Duration;
 import java.util.Arrays;
 import java.util.List;
-
 import javax.swing.JOptionPane;
 
 import org.openqa.selenium.WebElement;
@@ -33,8 +33,9 @@ public class SynchronizationImplicitWait {
         driver = new EdgeDriver();
         // Ejemplo de implicit wait es aplicado global mente cada vez que el webdriver
         // busque algun locator esperara esos segundos que tu indiques
-        
-        driver.manage().timeouts().implicitlyWait(5, SECONDS);
+        //el ejemplo primerod e abajo me da error como una advertencia si funciona como el otro de hecho esta impoprtado arriba 
+        //driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 
     }
 
@@ -92,7 +93,7 @@ public class SynchronizationImplicitWait {
         driver.findElement(By.cssSelector("input[placeholder='Enter promo code']")).sendKeys("rahulshettyacademy");
         
         driver.findElement(By.xpath("//div[@class='promoWrapper']//button[@class='promoBtn']")).click();
-        JOptionPane.showMessageDialog(null, driver.findElement(By.xpath("//div[@class='promoWrapper']//span[text()='Code applied ..!']")).getText());  
+        JOptionPane.showMessageDialog(null, driver.findElement(By.xpath("//div[@class='promoWrapper']//span[@class='promoInfo']")).getText());  
 
     }
 

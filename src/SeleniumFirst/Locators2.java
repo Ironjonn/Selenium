@@ -99,8 +99,9 @@ public class Locators2 {
 	}
 
 	public static void main(String[] args) throws InterruptedException {
-
 		Locators2 Object = new Locators2();
+
+
 		Object.launchbrowser();
 		Object.getUrl();
 		Object.Testing();
