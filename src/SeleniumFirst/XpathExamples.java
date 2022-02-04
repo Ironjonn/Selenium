@@ -40,6 +40,9 @@ public class XpathExamples {
         //Seleccionando el relative Xpath y con el *decimos cualquier tag que tenga el atributo dado 
         driver.findElement(By.xpath("//*[@id ='ctl00_mainContent_ddl_originStation1_CTXT']")).click();
 
+        //Como viajar de un xpath padre a un hijo en la segunda posicion este de abajo no es de esta pagina solo es ejemplo no funciona aqui 
+        driver.findElement(By.xpath("//p[@class='text-center text-white']/b[2]")).getText();
+
 
 
         
