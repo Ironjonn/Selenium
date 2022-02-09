@@ -33,7 +33,7 @@ public class XpathExamples {
         //Seleccionando un locator que tenga muy largo el nombre o lo usemos para reducirlo usando solo 4 letras 
         driver.findElement(By.xpath("//input[contains(@id,'friendsa')]")).click();
 
-        //Seleccionando el texto de algun lugar asi lo traes 
+        //Seleccionando el texto de algun lugar que no cambie el texto lo puedes usar haciendo click trllendo texto etx 
         JOptionPane.showMessageDialog(null, driver.findElement(By.xpath("//*[text()='Special Assistance']")).getText());  
 
 
@@ -42,6 +42,9 @@ public class XpathExamples {
 
         //Como viajar de un xpath padre a un hijo en la segunda posicion este de abajo no es de esta pagina solo es ejemplo no funciona aqui 
         driver.findElement(By.xpath("//p[@class='text-center text-white']/b[2]")).getText();
+
+        //Como viajar en un xpath padre a hijo y de hijo a nieto usando herencia en el xpath este ejemplo es de la clase Homework3 aqui no funciona
+        driver.findElement(By.xpath("//div[@class ='form-check-inline']/label[2]/span[1]")).click();
 
 
 

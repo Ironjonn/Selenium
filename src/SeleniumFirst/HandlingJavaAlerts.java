@@ -29,11 +29,11 @@ public class HandlingJavaAlerts {
         driver.findElement(By.xpath("//*[@id = 'name']")).sendKeys(Text);
 
         driver.findElement(By.xpath("//*[@id ='alertbtn']")).click();
-        JOptionPane.showMessageDialog(null, driver.switchTo().alert().getText());
+      //  JOptionPane.showMessageDialog(null, driver.switchTo().alert().getText());
 
         driver.switchTo().alert().accept();
         driver.findElement(By.xpath("//*[@id='confirmbtn']")).click();
-        JOptionPane.showMessageDialog(null, driver.switchTo().alert().getText());
+       // JOptionPane.showMessageDialog(null, driver.switchTo().alert().getText());
 
         driver.switchTo().alert().dismiss();
         

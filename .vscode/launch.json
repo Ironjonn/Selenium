@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Homework3",
+            "request": "launch",
+            "mainClass": "SeleniumFirst.Homework3",
+            "projectName": "Selenium"
+        },
+        {
+            "type": "java",
             "name": "Launch Addingitemstocart",
             "request": "launch",
             "mainClass": "SeleniumFirst.Addingitemstocart",
