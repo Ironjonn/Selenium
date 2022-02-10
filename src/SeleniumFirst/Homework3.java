@@ -1,9 +1,7 @@
 package SeleniumFirst;
 
-
+import java.util.Arrays;
 import java.util.List;
-
-
 
 import javax.swing.JOptionPane;
 
@@ -17,7 +15,7 @@ import org.openqa.selenium.WebElement;
 
 public class Homework3 {
 
-    WebDriver driver;
+    static WebDriver driver;
 
     public void launchBrowser() {
         System.setProperty("webdriver.edge.driver", "C:\\\\Selenium\\\\edgedriver_win32\\\\msedgedriver.exe");
@@ -56,56 +54,40 @@ public class Homework3 {
         driver.findElement(By.xpath("//input[@id= 'password']")).sendKeys(sendingpassword);
     }
 
-    public void selectinguser() throws InterruptedException {
-        // WebDriverWait obj; obj = new WebDriverWait(driver, 5);
-        // obj.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class
-        // = 'form-check-inline']/span[2]")));
+    public void selectinguser(WebDriverWait obj) {
 
         driver.findElement(By.xpath("//div[@class ='form-check-inline']/label[2]/span[1]")).click();
-        Thread.sleep(2000);
-        driver.findElement(By.cssSelector("button[id='okayBtn']")).click();
+
+        obj.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("button[id='okayBtn']"))).click();
 
     }
 
-        public void selectingdropdown(){
-            WebElement staticdropdow = driver.findElement(By.cssSelector("select[class ='form-control']"));
-            Select dropdown = new Select(staticdropdow);
+    public void selectingdropdown() {
+        WebElement staticdropdow = driver.findElement(By.cssSelector("select[class ='form-control']"));
+        Select dropdown = new Select(staticdropdow);
 
-            dropdown.selectByIndex(2);
+        dropdown.selectByIndex(2);
 
+    }
+
+    public void agreeterms() {
+        driver.findElement(By.cssSelector("input[id='terms']")).click();
+        driver.findElement(By.xpath("//*[@id='signInBtn']")).click();
+    }
+
+    public void addingitemstocart(WebDriverWait obj) {
+
+        obj.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@class= 'btn btn-info']")));
+
+        List<WebElement> lista = driver.findElements(By.xpath("//button[@class= 'btn btn-info']"));
+
+        for (int i = 0; i < lista.size(); i++) {
+
+            lista.get(i).click();
         }
-        public void agreeterms(){
-            driver.findElement(By.cssSelector("input[id='terms']")).click();
-            driver.findElement(By.xpath("//*[@id='signInBtn']")).click();
-        }
 
-        
+    }
 
-        public void addingitemstocart(){
-           WebDriverWait obj; obj = new WebDriverWait(driver, 5);
-           obj.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@class= 'btn btn-info']")));
-          // driver.findElement(By.xpath("//button[@class= 'btn btn-info']")).click();
-
-
-           List<WebElement> lista = driver.findElements(By.xpath("//button[@class= 'btn btn-info']"));
-            int tamano = lista.size();
-            //JOptionPane.showMessageDialog(null, tamano);
-
-
-           
-           for (int i = 0; i > lista.size(); i++) {
-
-                if ( i == tamano){
-                    driver.findElement(By.xpath("//button[@class= 'btn btn-info']")).click();
-                }
-                
-           
-           
-            }
-
-
-        }
-    
     public static void main(String[] args) throws InterruptedException {
         Homework3 objx = new Homework3();
         objx.launchBrowser();
@@ -117,10 +99,12 @@ public class Homework3 {
 
         String gettingpassword = objx.extractingpassword();
         objx.sendingpassword(gettingpassword);
-        
-        objx.selectinguser();
+        WebDriverWait obj;
+        obj = new WebDriverWait(driver, 5);
+        objx.selectinguser(obj);
         objx.selectingdropdown();
         objx.agreeterms();
-        objx.addingitemstocart();
+
+        objx.addingitemstocart(obj);
     }
 }
