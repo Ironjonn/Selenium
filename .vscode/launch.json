@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch FluentWaitTest",
+            "request": "launch",
+            "mainClass": "SeleniumFirst.FluentWaitTest",
+            "projectName": "Selenium"
+        },
+        {
+            "type": "java",
             "name": "Launch SynchronizationExplicitWait",
             "request": "launch",
             "mainClass": "SeleniumFirst.SynchronizationExplicitWait",
