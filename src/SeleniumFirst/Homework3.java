@@ -1,9 +1,9 @@
 package SeleniumFirst;
 
-import java.util.Arrays;
+
 import java.util.List;
 
-import javax.swing.JOptionPane;
+
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
