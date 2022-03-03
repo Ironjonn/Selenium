@@ -46,6 +46,8 @@ public class XpathExamples {
         //Como viajar en un xpath padre a hijo y de hijo a nieto usando herencia en el xpath este ejemplo es de la clase Homework3 aqui no funciona
         driver.findElement(By.xpath("//div[@class ='form-check-inline']/label[2]/span[1]")).click();
 
+        //Seleccionando un link de algunma pagina con el href ejemplo no es de esta clase 
+        driver.findElement(By.xpath("//*[@href='/dynamic_loading/1']")).click();
 
 
         
