@@ -26,7 +26,7 @@ public class WindowHandle {
         driver.manage().window().maximize();
     }
 
-    public void example() {
+    public void example() throws InterruptedException {
 
         driver.findElement(By.cssSelector(".blinkingText")).click();
 
@@ -46,14 +46,31 @@ public class WindowHandle {
         // Aqui abajo le decimos que cambie a la ventana dos de las que tienes abiertas
         // y que en esa ventana busque los locator y ya no este en la primera pagina
         driver.switchTo().window(childWindow);
-        //En es css selector de abajo como tiene un espacio la palabra se le agrega un punto para que funcione 
+        // En es css selector de abajo como tiene un espacio la palabra se le agrega un
+        // punto para que funcione
+
         String emailAdress = driver.findElement(By.cssSelector(".im-para.red")).getText();
 
         System.out.print(emailAdress);
+        Thread.sleep(2000);
+        driver.switchTo().window(parentWindow);
+
+        // Please email us at mentor@rahulshettyacademy.com with below template to
+        // receive response
+
+        // email us at mentor@rahulshettyacademy.com with below template to receive
+        // response
+        String[] emailarray = emailAdress.split(" ");
+        // 0 index Please use temporary password
+        // 1 index rahulshettyacademy' to Login.
+
+        String email = emailarray[4];
+
+        driver.findElement(By.xpath("//*[@id = 'username']")).sendKeys(email);
 
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         WindowHandle obj = new WindowHandle();
         obj.launchBrowser();
         obj.getUrl();

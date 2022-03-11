@@ -64,8 +64,10 @@ public class Locators2 {
 		driver.findElement(By.cssSelector(".reset-pwd-btn")).click();
 
 		Thread.sleep(2000);
+
 		String passwordtext;
 		passwordtext = driver.findElement(By.xpath("//*[@class='infoMsg']")).getText();
+		
 		// Please use temporary password 'rahulshettyacademy' to Login.
 		String[] passwordarray = passwordtext.split("'");
 		// 0 index Please use temporary password
