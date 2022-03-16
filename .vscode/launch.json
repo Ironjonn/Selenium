@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Homework5",
+            "request": "launch",
+            "mainClass": "SeleniumFirst.Homework5",
+            "projectName": "Selenium"
+        },
+        {
+            "type": "java",
             "name": "Launch FrameTest",
             "request": "launch",
             "mainClass": "SeleniumFirst.FrameTest",
