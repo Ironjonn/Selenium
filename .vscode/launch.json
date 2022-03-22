@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch RealTimeExercise",
+            "request": "launch",
+            "mainClass": "SeleniumFirst.RealTimeExercise",
+            "projectName": "Selenium"
+        },
+        {
+            "type": "java",
             "name": "Launch Homework5",
             "request": "launch",
             "mainClass": "SeleniumFirst.Homework5",
