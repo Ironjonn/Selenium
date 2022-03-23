@@ -50,6 +50,11 @@ public class XpathExamples {
         driver.findElement(By.xpath("//*[@href='/dynamic_loading/1']")).click();
 
 
+        //Seleccionando el elemento navegando por los tags nota que td[1] lo selecciona porque en el tag hay mas td 1, 2 o 3 que seleccionamos el index delprimero 
+        //nota solo es ejemplo aqui no funciona 
+        driver.findElement(By.xpath("//table/tbody/tr/td[1]/ul"));
+
+
         
 
         
