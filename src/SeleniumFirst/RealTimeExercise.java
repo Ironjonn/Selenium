@@ -14,7 +14,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 
 public class RealTimeExercise {
 
-    static WebDriver driver;
+     WebDriver driver;
 
     public void launchBrowser() {
         System.setProperty("webdriver.edge.driver", "C:\\\\Selenium\\\\edgedriver_win32\\\\msedgedriver.exe");
@@ -24,7 +24,7 @@ public class RealTimeExercise {
 
     public void getUrl() {
         driver.navigate().to("https://www.rahulshettyacademy.com/AutomationPractice/");
-        JOptionPane.showMessageDialog(null, driver.getTitle());
+        
     }
 
     public void windowsActivities() {
