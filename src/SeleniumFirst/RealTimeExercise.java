@@ -6,13 +6,11 @@ import java.util.Set;
 
 import javax.swing.JOptionPane;
 
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
-
 
 public class RealTimeExercise {
 
@@ -26,7 +24,7 @@ public class RealTimeExercise {
 
     public void getUrl() {
         driver.navigate().to("https://www.rahulshettyacademy.com/AutomationPractice/");
-        JOptionPane.showMessageDialog(null, driver.getTitle()); 
+        JOptionPane.showMessageDialog(null, driver.getTitle());
     }
 
     public void windowsActivities() {
@@ -55,33 +53,25 @@ public class RealTimeExercise {
         int size3 = dfooter1.findElements(By.tagName("a")).size();
         JOptionPane.showMessageDialog(null, size3);
 
-        //4 click on each link in the column and check if the pages are opening 
+        // 4 click on each link in the column and check if the pages are opening
 
-        for(int i = 1; i<size3; i++){
+        for (int i = 1; i < size3; i++) {
+            // Aqui lo que hace el string este es hacer control enter para abrir un nuevo
+            // tab de pagina como si fuera el click de en medio del raton
+            String clickonlinktab = Keys.chord(Keys.CONTROL, Keys.ENTER);
 
-            String clickonlinktab = Keys.chord(Keys.CONTROL,Keys.ENTER);
-
-            
-            
-            Thread.sleep(2000);
             dfooter1.findElements(By.tagName("a")).get(i).sendKeys(clickonlinktab);
-            Set<String> windows = driver.getWindowHandles();
-            Iterator<String> it = windows.iterator();
-            String parentWindow = it.next();
-            String childWindow = it.next();
 
-           
-            driver.switchTo().window(childWindow);
-            String childname = driver.getTitle();
-            System.out.print(childname);
-            driver.switchTo().window(parentWindow);
+        }
+        //Getting every page title from each window opened 
+        Thread.sleep(5000);
+        Set<String> windows = driver.getWindowHandles();
+        Iterator<String> it = windows.iterator();
+        
+        while (it.hasNext()) {
+            driver.switchTo().window(it.next());
 
-            
-            
-
-            
-
-
+            System.out.println(driver.getTitle());
         }
 
     }
@@ -91,7 +81,6 @@ public class RealTimeExercise {
         obj.launchBrowser();
         obj.getUrl();
         obj.windowsActivities();
-        
         obj.example();
     }
 }
