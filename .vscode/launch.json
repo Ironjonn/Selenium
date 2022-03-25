@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch HandilingCalendarUI",
+            "request": "launch",
+            "mainClass": "SeleniumFirst.HandilingCalendarUI",
+            "projectName": "Selenium"
+        },
+        {
+            "type": "java",
             "name": "Launch Homework6",
             "request": "launch",
             "mainClass": "SeleniumFirst.Homework6",
