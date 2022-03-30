@@ -54,6 +54,8 @@ public class XpathExamples {
         //nota solo es ejemplo aqui no funciona 
         driver.findElement(By.xpath("//table/tbody/tr/td[1]/ul"));
 
+        // dhead.findElement(By.xpath("//*[@id='checkbox-example']/fieldset/label[2]/input")).click();
+
 
         
 
