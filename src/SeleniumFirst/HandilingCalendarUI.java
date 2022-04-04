@@ -1,5 +1,6 @@
 package SeleniumFirst;
 
+import java.util.ArrayList;
 //  import java.time.Duration;
 import java.util.List;
 
@@ -30,50 +31,27 @@ public class HandilingCalendarUI {
 
     public void gettingmonths() throws InterruptedException {
 
-        // // driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-        // String insertmonth = JOptionPane.showInputDialog(null, "Please insert the month you want to select in the calendar");
-
-        // String monthss = driver.findElement(By.xpath("//*[@class = 'datepicker-months']//[contains(@class ='month')]")).getText();
-
-        // JOptionPane.showMessageDialog(null , monthss);
         
-         
-        
-
-        // driver.findElement(By.xpath("//*[@class = 'datepicker-days'] //th[@class = 'datepicker-switch']")).click();
-
-
-        
-
-        // List<WebElement> months = driver.findElements(By.xpath("//*[contains(@class, 'month')]"));
-        // int monthssize = months.size();
-        
-        // System.out.print(monthssize);
-        
-
-        // Thread.sleep(2000);
-
-        // for (int m = 0; m < monthssize; m++) {
-        //     String monthsname = months.get(m).getText();
-
-        //     if (monthsname.equalsIgnoreCase(insertmonth)) {
-        //         months.get(m).click();
-        //     }
-        // }
         driver.findElement(By.xpath("//*[@name = 'travel_date']")).click();
 
-        String month = JOptionPane.showInputDialog(null, "Please select one Month top fly ");
+        String month = JOptionPane.showInputDialog(null, "Please select one Month to fly ");
 
-        while(!driver.findElement(By.xpath("//*[@class = 'datepicker-days'] //th[@class = 'datepicker-switch']")).getText().contains(month)){
-            driver.findElement(By.xpath("//*[@class = 'datepicker-days'] //th[@class= 'next']")).click();
+        //While loop will keep executing until it becomes false 
+        // lo que hace el ciclo while es que correra el codigo siempre que sea true pero cuando se convierta falso sale del ciclo 
+        // en este caso revertimos el driver si es falso lo convertimos true con el ! pero cuando llegue a ser true se convierte en falso 
+        while(!driver.findElement(By.xpath("//*[@class = 'datepicker-days'] //*[@class ='datepicker-switch']")).getText().contains(month)){
+            driver.findElement(By.xpath("//*[@class = 'datepicker-days']//*[@class = 'next']")).click();
         }
 
+        
+        
 
     }
 
+    
 
     public void gettingdays() throws InterruptedException {
-       
+
         // driver.findElement(By.xpath("//*[@name = 'travel_date']")).click();
         // driver.findElement(By.xpath("//input[contains(@id,'friendsa')]")).click();
         String insertday = JOptionPane.showInputDialog(null,
@@ -93,7 +71,6 @@ public class HandilingCalendarUI {
         }
     }
 
-    
     public static void main(String[] args) throws InterruptedException {
         HandilingCalendarUI obx = new HandilingCalendarUI();
         obx.launchBrowser();

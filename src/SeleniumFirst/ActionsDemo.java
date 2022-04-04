@@ -55,7 +55,7 @@ public class ActionsDemo {
         driver.findElement(By.cssSelector(".blinkingText")).click();
         Set <String> windows = driver.getWindowHandles();
         Iterator <String> it =  windows.iterator();
-        String parentID = it.next();
+        //String parentID = it.next();
         String childID = it.next();
         driver.switchTo().window(childID);
         
