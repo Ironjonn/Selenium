@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Homework7",
+            "request": "launch",
+            "mainClass": "SeleniumFirst.Homework7",
+            "projectName": "Selenium"
+        },
+        {
+            "type": "java",
             "name": "Launch HowtoHandleSkrolling",
             "request": "launch",
             "mainClass": "SeleniumFirst.HowtoHandleSkrolling",
