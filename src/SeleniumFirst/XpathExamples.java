@@ -54,7 +54,13 @@ public class XpathExamples {
         //nota solo es ejemplo aqui no funciona 
         driver.findElement(By.xpath("//table/tbody/tr/td[1]/ul"));
 
-        // dhead.findElement(By.xpath("//*[@id='checkbox-example']/fieldset/label[2]/input")).click();
+        //Los elementos de abajo se usan cuando creas un web element de alguna parte de la pagina y despues llamas a sus tags etc dentro de ese elemento usando xpath 
+
+        //dhead.findElement(By.xpath("//*[@id='checkbox-example']/fieldset/label[2]/input")).click();
+
+        // JOptionPane.showMessageDialog(null, row1.findElement(By.xpath("//tr[3]//td[3]")).getText());
+
+        // WebElement row3 = row1.findElement(By.xpath("//tr[3]"));
 
 
         
