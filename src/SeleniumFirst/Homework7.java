@@ -2,7 +2,6 @@ package SeleniumFirst;
 
 import java.time.Duration;
 
-
 import javax.swing.JOptionPane;
 
 import org.openqa.selenium.By;
@@ -34,33 +33,27 @@ public class Homework7 {
 
         driver.findElement(By.xpath("//*[@href='https://www.rahulshettyacademy.com/AutomationPractice']")).click();
 
+        // Examples on one table getting the information from 1 webelement that you can
+        // reeuse to create another webelement
         WebElement row1 = driver.findElement(By.xpath("//*[@class = 'table-display']"));
 
-         
-        // first row 
+        // first row
         JOptionPane.showMessageDialog(null, row1.findElements(By.tagName("tr")).size());
 
-        
-        //Second row 
+        // Second row
         JOptionPane.showMessageDialog(null, row1.findElements(By.tagName("th")).size());
 
+        // third row
         
-        
-        //third row          
-
-        JOptionPane.showMessageDialog(null, row1.findElement(By.xpath("//tr[3]//td[3]")).getText());
 
         WebElement row3 = row1.findElement(By.xpath("//tr[3]"));
 
-
-        
-
-         for (int i = 0; i <= row1.findElements(By.xpath("//tr[3]")).size(); i++) {
+        for (int i = 0; i <= row1.findElements(By.xpath("//tr[3]")).size(); i++) {
 
             JOptionPane.showMessageDialog(null, row3.findElements(By.tagName("td")).get(i).getText());
 
             System.out.println(row3.findElements(By.tagName("td")).get(i).getText());
-         }
+        }
 
     }
 

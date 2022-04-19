@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Homework8",
+            "request": "launch",
+            "mainClass": "SeleniumFirst.Homework8",
+            "projectName": "Selenium"
+        },
+        {
+            "type": "java",
             "name": "Launch Homework7",
             "request": "launch",
             "mainClass": "SeleniumFirst.Homework7",
