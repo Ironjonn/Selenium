@@ -6,6 +6,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Homework7",
+            "request": "launch",
+            "mainClass": "SeleniumFirst.Homework7",
+            "projectName": "Selenium"
+        },
+        {
+            "type": "java",
+            "name": "Launch HowtoHandleSkrolling",
+            "request": "launch",
+            "mainClass": "SeleniumFirst.HowtoHandleSkrolling",
+            "projectName": "Selenium"
+        },
+        {
+            "type": "java",
+            "name": "Launch HandilingCalendarUI",
+            "request": "launch",
+            "mainClass": "SeleniumFirst.HandilingCalendarUI",
+            "projectName": "Selenium"
+        },
+        {
+            "type": "java",
+            "name": "Launch Homework6",
+            "request": "launch",
+            "mainClass": "SeleniumFirst.Homework6",
+            "projectName": "Selenium"
+        },
+        {
+            "type": "java",
+            "name": "Launch RealTimeExercise",
+            "request": "launch",
+            "mainClass": "SeleniumFirst.RealTimeExercise",
+            "projectName": "Selenium"
+        },
+        {
+            "type": "java",
             "name": "Launch Homework5",
             "request": "launch",
             "mainClass": "SeleniumFirst.Homework5",

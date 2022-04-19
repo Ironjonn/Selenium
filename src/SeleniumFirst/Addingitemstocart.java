@@ -41,10 +41,10 @@ public class Addingitemstocart {
 
             
             //Format into actual vegetable name 
-            //Separamos el string real que es Cucumber - 1 Kg y lo convertimos en un array para buscarlo mejor arriba 
+            //Separamos el string real que es = Cucumber - 1 Kg y lo convertimos en un array para buscarlo mejor arriba 
             String[] name = productos.get(i).getText().split("-");
 
-            //Quitamos el estacion con el metodo trim 
+            //Quitamos el espacion con el metodo trim 
             String easynames = name[0].trim();
             
             // Convert array into arraylist for easy search
