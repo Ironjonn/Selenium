@@ -5,6 +5,7 @@ import java.util.List;
 import javax.swing.JOptionPane;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -32,7 +33,7 @@ public class Homework8 {
 
         driver.findElement(By.xpath("//*[@href='https://www.rahulshettyacademy.com/AutomationPractice']")).click();
 
-        String country = JOptionPane.showInputDialog(null, "Please insert the country you want to search ");
+        String country = "uni";
 
         driver.findElement(By.xpath("//*[@class = 'inputs ui-autocomplete-input']")).sendKeys(country);
         Thread.sleep(2000);
@@ -41,7 +42,6 @@ public class Homework8 {
 
         WebElement usa = driver.findElement(By.xpath("//*[@id = 'ui-id-1']/li[@class = 'ui-menu-item'][6]"));
 
-        
         Actions movingmouse = new Actions(driver);
         Thread.sleep(2000);
 
@@ -53,18 +53,20 @@ public class Homework8 {
         for (WebElement option : options) {
 
             if (option.getText().contains(country)) {
-                
+
                 movingmouse.moveToElement(usa).clickAndHold().build().perform();
                 Thread.sleep(1000);
 
                 movingmouse.release().build().perform();
-                
+
+                //en el ejemplo de abajo estoy tomando el atributo sin agarrarlo del xpath con el metodo get atribut que interactua con html 
+                System.out.println(driver.findElement(By.xpath("//*[@class = 'inputs ui-autocomplete-input']")).getAttribute("value"));
+
             }
             break;
+
         }
-        Thread.sleep(2000);
-        String countryselected = driver.findElement(By.xpath("//*[text() = 'United States (USA)']")).getText();
-         JOptionPane.showMessageDialog(null, countryselected);
+
     }
 
     public static void main(String[] args) throws InterruptedException {
