@@ -2,16 +2,16 @@ package SeleniumFirst;
 
 import java.util.List;
 
-import javax.swing.JOptionPane;
+
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
-public class Homework8 {
+public class Homework8Autosuggestdropdown {
     WebDriver driver;
 
     public void launchBrowser() {
@@ -70,7 +70,7 @@ public class Homework8 {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        Homework8 object = new Homework8();
+        Homework8Autosuggestdropdown object = new Homework8Autosuggestdropdown();
         object.launchBrowser();
         object.gettingurl();
         object.windowsActivities();
