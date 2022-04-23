@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Homework8Autosuggestdropdown",
+            "request": "launch",
+            "mainClass": "SeleniumFirst.Homework8Autosuggestdropdown",
+            "projectName": "Selenium"
+        },
+        {
+            "type": "java",
+            "name": "Launch ScreenShot",
+            "request": "launch",
+            "mainClass": "SeleniumFirst.ScreenShot",
+            "projectName": "Selenium"
+        },
+        {
+            "type": "java",
             "name": "Launch DeletingCookisandMore",
             "request": "launch",
             "mainClass": "SeleniumFirst.DeletingCookisandMore",
