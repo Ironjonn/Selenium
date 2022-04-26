@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch BrokenLinks",
+            "request": "launch",
+            "mainClass": "SeleniumFirst.BrokenLinks",
+            "projectName": "Selenium"
+        },
+        {
+            "type": "java",
             "name": "Launch Homework8Autosuggestdropdown",
             "request": "launch",
             "mainClass": "SeleniumFirst.Homework8Autosuggestdropdown",
