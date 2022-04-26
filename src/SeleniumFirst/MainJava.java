@@ -13,13 +13,21 @@ public class MainJava {
          driver = new ChromeDriver();
          
     }    
-
-    public void reachUrl(String url ){
-        driver.get(url);
-    }
-
+    
     public void windowsActivities() {
         
         driver.manage().window().maximize();
     }
+
+    public void deleatecokkies(){
+        driver.manage().deleteAllCookies();
+    }
+    
+    public void reachUrl(String url ){
+        driver.get(url);
+    }
+
+    
+
+   
 }   
