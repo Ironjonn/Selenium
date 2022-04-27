@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Actionsdemo2",
+            "request": "launch",
+            "mainClass": "SeleniumFirst.Actionsdemo2",
+            "projectName": "Selenium"
+        },
+        {
+            "type": "java",
             "name": "Launch BrokenLinks",
             "request": "launch",
             "mainClass": "SeleniumFirst.BrokenLinks",

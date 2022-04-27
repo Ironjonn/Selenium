@@ -35,6 +35,7 @@ public class WindowHandle {
         // sucesibamente
         // sirve para cuando cambias de pagina y el driver le tienes que decir en que
         // pagina va buscar el locator
+        
         Set<String> windows = driver.getWindowHandles();
         Iterator<String> it = windows.iterator();
         String parentWindow = it.next();
