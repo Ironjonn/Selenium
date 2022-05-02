@@ -1,5 +1,10 @@
 package SeleniumFirst;
 
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.openqa.selenium.Proxy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -13,10 +18,19 @@ public class Httpcertifications {
     WebDriver driver;
     ChromeOptions options = new ChromeOptions();
 
+    Proxy proxy = new Proxy();
+
+
     public void launchBrowser() {
         System.setProperty("webdriver.chrome.driver", "C:\\\\Selenium\\\\chromedriver.exe");
         options.setAcceptInsecureCerts(true);
         driver = new ChromeDriver(options);
+
+        proxy.setHttpProxy("ipaddres:4444");
+        options.setCapability("proxy", proxy); 
+        Map <String, Object> pref = new HashMap <String, Object>();
+
+        pref.put("download.default_directory", "/directory/path");
 
     }
 
