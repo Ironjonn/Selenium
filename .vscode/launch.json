@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch StreamsandLambdaExpretion",
+            "request": "launch",
+            "mainClass": "StreamsandLambdaExpretion",
+            "projectName": "Selenium"
+        },
+        {
+            "type": "java",
             "name": "Launch Actionsdemo2",
             "request": "launch",
             "mainClass": "SeleniumFirst.Actionsdemo2",
