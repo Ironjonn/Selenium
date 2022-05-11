@@ -6,7 +6,7 @@ import java.util.stream.Stream;
 
 import javax.swing.JOptionPane;
 
-import com.google.thirdparty.publicsuffix.PublicSuffixPatterns;
+
 
 import org.testng.Assert;
 
@@ -18,6 +18,7 @@ public class StreamsandLambdaExpretionMap {
         //Ejemplo de metodo de stream  sorted() = que nos permite ordenar los strings alfabeticamente 
         //Ejemplo de metodo de stream anymach() = buscara en la lista si existe ese nombre o string 
         //Ejemplo de metodo de stream collect() = convertira el stream en list strings  
+        
         //Print the names wich have last letter as 'a' with Uppercase        
         Stream.of("Pedro", "Roberto", "Camila", "Karina").filter(y -> y.endsWith("a")).map(s->s.toUpperCase()).forEach(s->System.out.println(s));
            
@@ -50,12 +51,18 @@ public class StreamsandLambdaExpretionMap {
     }
 
     public void programingexercise() {
+        
         //Exercise print unique number from this array 
         //sort the array orden
         List<Integer> mylist =  Arrays.asList(33,55,7,9,6,8,44,2,1,4,7,9,0,8,79,6);
 
-        mylist.stream().distinct().forEach(s->System.out.println(s));
+        mylist.stream().sorted().distinct().forEach(s-> System.out.println(s));
 
+        Stream<Integer> ls = mylist.stream();
+
+        ls.distinct().forEach(s->System.out.println(s));
+
+        
 
     }
 
