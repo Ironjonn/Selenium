@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch WebTableSorting",
+            "request": "launch",
+            "mainClass": "SeleniumFirst.WebTableSorting",
+            "projectName": "Selenium"
+        },
+        {
+            "type": "java",
             "name": "Launch StreamsandLambdaExpretionMap",
             "request": "launch",
             "mainClass": "StreamsandLambdaExpretionMap",
