@@ -6,6 +6,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch WebTableSorting",
+            "request": "launch",
+            "mainClass": "SeleniumFirst.WebTableSorting",
+            "projectName": "Selenium"
+        },
+        {
+            "type": "java",
+            "name": "Launch StreamsandLambdaExpretionMap",
+            "request": "launch",
+            "mainClass": "StreamsandLambdaExpretionMap",
+            "projectName": "Selenium"
+        },
+        {
+            "type": "java",
+            "name": "Launch StreamsandLambdaExpretion",
+            "request": "launch",
+            "mainClass": "StreamsandLambdaExpretion",
+            "projectName": "Selenium"
+        },
+        {
+            "type": "java",
+            "name": "Launch Actionsdemo2",
+            "request": "launch",
+            "mainClass": "SeleniumFirst.Actionsdemo2",
+            "projectName": "Selenium"
+        },
+        {
+            "type": "java",
+            "name": "Launch BrokenLinks",
+            "request": "launch",
+            "mainClass": "SeleniumFirst.BrokenLinks",
+            "projectName": "Selenium"
+        },
+        {
+            "type": "java",
             "name": "Launch Homework8Autosuggestdropdown",
             "request": "launch",
             "mainClass": "SeleniumFirst.Homework8Autosuggestdropdown",

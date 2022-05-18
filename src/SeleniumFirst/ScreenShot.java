@@ -16,44 +16,32 @@ public class ScreenShot extends MainJava{
 
     public void takescreen() throws InterruptedException, IOException{
         driver.findElement(By.xpath("//*[@id ='twotabsearchtextbox']")).sendKeys("iphone 13");
-        Thread.sleep(4000);
+        Thread.sleep(2000);
         
         List<WebElement> options =  driver.findElements(By.xpath("//div[@class = 's-suggestion-container']"));
-        WebElement sel = options.get(3);
-        List<String> strings = new ArrayList<String>();
+        WebElement selection = options.get(2);
+       
         
-        for(WebElement e :options){
-            strings.add(e.getText());
-        }
+        System.out.println(selection.getText());
+    
 
-       String iphone = strings.get(3); 
-
+                
+        
         Actions act = new Actions(driver);
         Thread.sleep(2000);
-
-        for(int i = 0; i<options.size(); i ++){
-            if (options.get(i).getText().contains(iphone)){
-              
-               act.moveToElement(sel).clickAndHold().build().perform();
+         
+          if(selection.getText().contains("pro max")){
+            Thread.sleep(2000);
+               act.moveToElement(selection).clickAndHold().build().perform();
                Thread.sleep(2000);
-               act.release().build().perform();
-
-            } break;
-        }
-        
-
-        //   if(sel.getText().contains("iphone 13 pro")){
-
-        //        act.moveToElement(sel).clickAndHold().build().perform();
-        //        Thread.sleep(2000);
-        //        act.release().build().perform();;
+               act.release().build().perform();;
             
            
-        // }
+        }
 
-        Thread.sleep(5000);
+        Thread.sleep(3000);
          File screenshotobj = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-         FileUtils.copyFile(screenshotobj, new File("C:\\Users\\Public\\scrennhot2.png"));
+         FileUtils.copyFile(screenshotobj, new File("C:\\Users\\Public\\scrennhot5.png"));
          
     }
 

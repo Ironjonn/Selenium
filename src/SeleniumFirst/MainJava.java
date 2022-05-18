@@ -24,7 +24,7 @@ public class MainJava {
     }
     
     public void reachUrl(String url ){
-        driver.get(url);
+        driver.navigate().to(url);;
     }
 
     

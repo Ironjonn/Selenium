@@ -45,6 +45,7 @@ public class ActionsDemo {
         // context click es el right click
         a.moveToElement(move).contextClick().build().perform();
         a.moveToElement(movei).click().keyDown(Keys.SHIFT).sendKeys("hellows").doubleClick().build().perform();
+        
     }
 
     public void example2() throws InterruptedException {
