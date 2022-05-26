@@ -11,7 +11,9 @@ import javax.swing.JOptionPane;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 public class WebTableSorting extends MainJava {
@@ -101,32 +103,77 @@ public class WebTableSorting extends MainJava {
 
     }
 
-    public void whileloop(){
+    public void whileloop() throws InterruptedException {
+
         driver.navigate().refresh();
-
+        Thread.sleep(2000);
         List<String> price;
-        
+        String fruit = JOptionPane.showInputDialog(null, "Please Insert the fruit or vegetable you want to see price");
 
-        do{
+        do {
             List<WebElement> List = driver.findElements(By.xpath("//tbody/tr/td[1]"));
-            price = List.stream().filter(s->s.getText().contains("Mango")).map(s->getPrivatePrice(s)).collect(Collectors.toList());
 
-            price.forEach(a->JOptionPane.showMessageDialog(null, a));
+            price = List.stream().filter(s -> s.getText().contains(fruit)).map(s -> getPrivatePrice(s)).collect(Collectors.toList());
 
-            if(price.size()<1){
+            price.forEach(a -> JOptionPane.showMessageDialog(null, a));
+            // Aqui el size de price.size siempre empieza con 0 hasta que encuentre el
+            // elemento por eso el loop sigue porque 0 es menor que 1 (respuesta si ) y
+            // continual,
+            // Cuando ya encuentra el elemento cambia a su valor price.size = 1 entonces 1
+            // es menor que 1 (respuesta no) y sale del loop
+            if (price.size() < 1) {
 
                 driver.findElement(By.xpath("//a[@aria-label='Next']")).click();
 
             }
-        }while(price.size()<1);
-
+        } while (price.size() < 1);
+        
 
     }
 
-    private static String getPrivatePrice(WebElement s) {
+    private static String getPrivatePrice(WebElement b) {
 
-        String pricevalue = s.findElement(By.xpath("following-sibling::td[1]")).getText();
+        String pricevalue = b.findElement(By.xpath("following-sibling::td[1]")).getText();
         return pricevalue;
+    }
+
+    public void forexample() throws InterruptedException {
+       
+        driver.navigate().refresh();
+
+        // for(WebElement nombre :weblist){
+
+        // System.out.println(nombre.getText());
+        // }
+
+        
+        String precio = JOptionPane.showInputDialog(null, "Porfavor inserta la fruta que quieres saber el precio");
+        Thread.sleep(3000);
+
+        List<WebElement> weblist1 = driver.findElements(By.xpath("//tbody/tr/td[1]"));
+
+        
+
+        for (WebElement option : weblist1) {
+
+            while (!option.getText().contains(precio)) {
+
+                driver.findElement(By.xpath("//ul/li/a[@aria-label = 'Next']")).click();
+            }
+
+        }
+        // for(int i = 0; i==weblist1.size(); i++){
+        // driver.findElement(By.xpath("//ul/li/a[@aria-label = 'Next']")).click();
+
+        // if(option.getText().contains(precio)){
+        // System.out.println("ya pasaste la prueba ");
+        // } else{
+        // System.out.println("sigue practicando");
+        // }
+        // }
+
+        // }
+
     }
 
     public static void main(String[] args) throws InterruptedException {
@@ -137,5 +184,9 @@ public class WebTableSorting extends MainJava {
         obj.deleatecokkies();
         obj.Table();
         obj.whileloop();
+        Thread.sleep(2000);
+
+        obj.forexample();
+
     }
 }

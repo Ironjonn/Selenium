@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch WebtableSorting2",
+            "request": "launch",
+            "mainClass": "SeleniumFirst.WebtableSorting2",
+            "projectName": "Selenium"
+        },
+        {
+            "type": "java",
             "name": "Launch WebTableSorting",
             "request": "launch",
             "mainClass": "SeleniumFirst.WebTableSorting",
