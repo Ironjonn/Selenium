@@ -1,6 +1,8 @@
 package SeleniumFirst;
 
 import java.util.List;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 import javax.swing.JOptionPane;
 
@@ -17,24 +19,26 @@ public class WebtableSorting2 extends MainJava {
         List<WebElement> tabla = driver.findElements(By.xpath("//tbody/tr/td[1]"));
 
         WebElement boton = driver.findElement(By.xpath("//ul/li/a[@aria-label = 'Next']"));
-        tabla = driver.findElements(By.xpath("//tbody/tr/td[1]"));
+
         int clicks = 0;
         for (int i = 0; i < tabla.size(); i++) {
-            
-            while (!tabla.get(i).getText().contains(fruta) && clicks<=2) {
+
+            while (!tabla.get(i).getText().contains(fruta) && clicks <= 2) {
 
                 tabla = driver.findElements(By.xpath("//tbody/tr/td[1]"));
                 Thread.sleep(3000);
                 boton.click();
                 tabla = driver.findElements(By.xpath("//tbody/tr/td[1]"));
-                clicks ++;
-                
-            } if(tabla.get(i).getText().contains(fruta)){
+                clicks++;
 
-                WebElement o = tabla.get(i);  
+            }
+            if (tabla.get(i).getText().contains(fruta)) {
+
+                WebElement o = tabla.get(i);
                 tabla = driver.findElements(By.xpath("//tbody/tr/td[1]"));
-                JOptionPane.showMessageDialog(null, "The price of " + fruta + " is " +  o.findElement(By.xpath("following-sibling::td[1]")).getText());
-                break; 
+                JOptionPane.showMessageDialog(null, "The price of " + fruta + " is "
+                        + o.findElement(By.xpath("following-sibling::td[1]")).getText());
+                break;
             }
 
         }
@@ -53,7 +57,8 @@ public class WebtableSorting2 extends MainJava {
 
         // if(tabla.get(i).getText().contains(fruta)){
         // tabla = driver.findElements(By.xpath("//tbody/tr/td[1]"));
-        // JOptionPane.showMessageDialog(null, "The price of " + fruta + " is " +  o.findElement(By.xpath("following-sibling::td[1]")).getText());
+        // JOptionPane.showMessageDialog(null, "The price of " + fruta + " is " + 
+        // o.findElement(By.xpath("following-sibling::td[1]")).getText());
         // }
 
         // }

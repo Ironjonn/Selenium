@@ -11,9 +11,9 @@ import javax.swing.JOptionPane;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
+
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
 import org.testng.Assert;
 
 public class WebTableSorting extends MainJava {
@@ -103,7 +103,7 @@ public class WebTableSorting extends MainJava {
 
     }
 
-    public void whileloop() throws InterruptedException {
+    public void dowhileloop() throws InterruptedException {
 
         driver.navigate().refresh();
         Thread.sleep(2000);
@@ -113,7 +113,8 @@ public class WebTableSorting extends MainJava {
         do {
             List<WebElement> List = driver.findElements(By.xpath("//tbody/tr/td[1]"));
 
-            price = List.stream().filter(s -> s.getText().contains(fruit)).map(s -> getPrivatePrice(s)).collect(Collectors.toList());
+            price = List.stream().filter(s -> s.getText().contains(fruit)).map(s -> getPrivatePrice(s))
+                    .collect(Collectors.toList());
 
             price.forEach(a -> JOptionPane.showMessageDialog(null, a));
             // Aqui el size de price.size siempre empieza con 0 hasta que encuentre el
@@ -127,7 +128,6 @@ public class WebTableSorting extends MainJava {
 
             }
         } while (price.size() < 1);
-        
 
     }
 
@@ -138,7 +138,7 @@ public class WebTableSorting extends MainJava {
     }
 
     public void forexample() throws InterruptedException {
-       
+
         driver.navigate().refresh();
 
         // for(WebElement nombre :weblist){
@@ -146,13 +146,10 @@ public class WebTableSorting extends MainJava {
         // System.out.println(nombre.getText());
         // }
 
-        
         String precio = JOptionPane.showInputDialog(null, "Porfavor inserta la fruta que quieres saber el precio");
         Thread.sleep(3000);
 
         List<WebElement> weblist1 = driver.findElements(By.xpath("//tbody/tr/td[1]"));
-
-        
 
         for (WebElement option : weblist1) {
 
@@ -183,7 +180,7 @@ public class WebTableSorting extends MainJava {
         obj.reachUrl("https://rahulshettyacademy.com/seleniumPractise/#/offers");
         obj.deleatecokkies();
         obj.Table();
-        obj.whileloop();
+        obj.dowhileloop();
         Thread.sleep(2000);
 
         obj.forexample();
