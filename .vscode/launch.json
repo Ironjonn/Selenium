@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch IvokingMultipleWindows",
+            "request": "launch",
+            "mainClass": "SeleniumFirst.IvokingMultipleWindows",
+            "projectName": "Selenium"
+        },
+        {
+            "type": "java",
             "name": "Launch RelativeLocators",
             "request": "launch",
             "mainClass": "SeleniumFirst.RelativeLocators",
