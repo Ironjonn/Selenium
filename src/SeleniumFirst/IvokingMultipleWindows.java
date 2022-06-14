@@ -37,9 +37,10 @@ public class IvokingMultipleWindows extends MainJava {
         Thread.sleep(2000);
         driver.findElement(with(By.tagName("input")).near(uno)).sendKeys(cursename);
         
-
-        // dos.sendKeys(cursename);
-
+        Thread.sleep(2000);
+        driver.switchTo().newWindow(WindowType.WINDOW);
+        driver.navigate().to("https://rahulshettyacademy.com/seleniumPractise/#/offers");
+        
         
     }
 
@@ -51,6 +52,8 @@ public class IvokingMultipleWindows extends MainJava {
         obj.reachUrl("https://rahulshettyacademy.com/angularpractice/");
         obj.deleatecokkies();
         obj.handson();
+
+        
 
     }
 }

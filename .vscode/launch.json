@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch WebelementPartialScreenShot",
+            "request": "launch",
+            "mainClass": "SeleniumFirst.WebelementPartialScreenShot",
+            "projectName": "Selenium"
+        },
+        {
+            "type": "java",
+            "name": "Launch WebelementPartialScreenShot",
+            "request": "launch",
+            "mainClass": "WebelementPartialScreenShot",
+            "projectName": "Selenium"
+        },
+        {
+            "type": "java",
             "name": "Launch IvokingMultipleWindows",
             "request": "launch",
             "mainClass": "SeleniumFirst.IvokingMultipleWindows",
