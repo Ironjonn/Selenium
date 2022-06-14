@@ -29,12 +29,15 @@ public class WebelementPartialScreenShot {
 
     public void takescreenshot() throws IOException{
 
-       WebElement first =  driver.findElement(By.xpath("//div[@class ='form-group']//input[@name='name']"));
+       WebElement first =  driver.findElement(By.xpath("//form/div[1]/input"));
         first.sendKeys("Welcome to selenium");
-
+        //Get Screenshot of the WebElement
        File file =  first.getScreenshotAs(OutputType.FILE); 
-       FileUtils.copyFile(file, new File("logo.png"));
+       FileUtils.copyFile(file, new File("logo3.png"));
 
+        //Get HEight & Wiidth
+        System.out.println(first.getRect().getDimension().getHeight());
+        System.out.println(first.getRect().getDimension().getWidth());
     }
     public static void main(String[] args) throws IOException {
         
